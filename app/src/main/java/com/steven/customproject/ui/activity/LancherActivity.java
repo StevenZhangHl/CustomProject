@@ -10,6 +10,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.horen.base.base.BaseActivity;
 import com.horen.base.constant.ARouterPath;
 import com.horen.base.rx.RxHelper;
+import com.horen.base.util.AnimationUtils;
 import com.horen.base.util.DisplayUtil;
 import com.steven.customproject.R;
 

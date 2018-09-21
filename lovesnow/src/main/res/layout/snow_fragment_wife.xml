@@ -13,17 +13,19 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height"></com.horen.base.widget.HRToolbar>
 
-        <RelativeLayout
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="老婆亲亲"
-                android:textColor="@color/color_main_color"
-                android:textSize="@dimen/textSize_30" />
-        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
