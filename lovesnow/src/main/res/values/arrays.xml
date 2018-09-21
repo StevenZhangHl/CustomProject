@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <array name="parter_tab_items" tools:ignore="ResourceName">
+        <item>我爱</item>
+        <item>老婆</item>
+        <item>大人</item>
+    </array>
+    <array name="parter_tab_icon_unselect" tools:ignore="ResourceName">
+        <item>@mipmap/icon_love_normal</item>
+        <item>@mipmap/icon_wife_normal</item>
+        <item>@mipmap/icon_user_normal</item>
+    </array>
+    <array name="parter_tab_icon_select" tools:ignore="ResourceName">
+        <item>@mipmap/icon_love_select</item>
+        <item>@mipmap/icon_wife_select</item>
+        <item>@mipmap/icon_user_select</item>
+    </array>
+</resources>

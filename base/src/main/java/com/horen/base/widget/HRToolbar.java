@@ -80,7 +80,7 @@ public class HRToolbar extends FrameLayout {
             rightTitle = a.getString(R.styleable.HRToolbar_right_title);
             elevation = a.getInteger(R.styleable.HRToolbar_title_elevation, 2);
             isWhite = a.getBoolean(R.styleable.HRToolbar_is_white, false);
-            backgroundColor = a.getColor(R.styleable.HRToolbar_bg_color, ContextCompat.getColor(mContent, R.color.color_main));
+            backgroundColor = a.getColor(R.styleable.HRToolbar_bg_color, ContextCompat.getColor(mContent, R.color.color_main_color));
             rightIcon = a.getDrawable(R.styleable.HRToolbar_right_icon);
             leftIcon = a.getDrawable(R.styleable.HRToolbar_left_icon);
         } finally {
@@ -88,7 +88,7 @@ public class HRToolbar extends FrameLayout {
         }
         if (isWhite) {
             // 没有设置背景色，默认白色标题栏背景色为#F5F5F5
-            if (backgroundColor == ContextCompat.getColor(mContent, R.color.color_main)) {
+            if (backgroundColor == ContextCompat.getColor(mContent, R.color.color_main_color)) {
                 setBackgroundColor(ContextCompat.getColor(mContent, R.color.color_f5));
             } else {
                 setBackgroundColor(backgroundColor);

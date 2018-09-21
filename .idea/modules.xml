@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CustomProject.iml" filepath="$PROJECT_DIR$/CustomProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chart/chart.iml" filepath="$PROJECT_DIR$/chart/chart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/countrylib/countrylib.iml" filepath="$PROJECT_DIR$/countrylib/countrylib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/indexlib/indexlib.iml" filepath="$PROJECT_DIR$/indexlib/indexlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lovesnow/lovesnow.iml" filepath="$PROJECT_DIR$/lovesnow/lovesnow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maplib/maplib.iml" filepath="$PROJECT_DIR$/maplib/maplib.iml" />
+    </modules>
+  </component>
+</project>

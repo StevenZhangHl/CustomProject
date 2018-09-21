@@ -1,15 +1,13 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 def config = rootProject.ext.android // 配置
 android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
     defaultConfig {
-        applicationId "com.steven.customproject"
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
-        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
@@ -17,46 +15,23 @@ android {
             }
         }
     }
-    android.applicationVariants.all {
-        variant ->
-            variant.outputs.all {
-                outputFileName = "lovesnow" + "-v" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk"
-            }
-    }
-    signingConfigs {
-        debug {
-            storeFile file("$rootDir/lovesnow.jks")
-            storePassword "1314520"
-            keyAlias "lovesnow"
-            keyPassword "1314520"
-        }
-
-        release {
-            storeFile file("$rootDir/lovesnow.jks")
-            storePassword "1314520"
-            keyAlias "lovesnow"
-            keyPassword "1314520"
-        }
-    }
+    resourcePrefix "snow_"
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     annotationProcessor "com.alibaba:arouter-compiler:$aroutercompiler"
     api project(':base')
-    api project(':chart')
-    api project(':countrylib')
-    api project(':indexlib')
-    api project(':maplib')
-    implementation project(':lovesnow')
 }

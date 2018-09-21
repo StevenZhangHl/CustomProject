@@ -7,37 +7,16 @@ package com.horen.base.constant;
  * @github :https://github.com/chenyy0708
  */
 public class ARouterPath {
-    //---------------------------------服务端--------------------------------
+    //---------------------------------主app--------------------------------
 
     /**
-     * 服务端MainActivity
+     * 主MainActivity
      */
-    public static final String SERVICE_MAIN_ACTIVITY = "/service/servicemainactivity";
+    public static final String HOST_MAIN_ACTIVITY = "/host/mainactivity";
 
-
-    //---------------------------------合伙人--------------------------------
-
+    //---------------------------------lovesnow--------------------------------
     /**
-     * 测试Fragment2
+     * lovesnow MainActivity
      */
-    public static final String PARTNER_CUSROMER_CENTER_FRAGMENT = "/partner/customercenterfragment";
-    public static final String PARNNER_MAIN_ACTIVITY = "/partner/businessmainActivity";
-    //下单页面
-    public static final String CREATE_ORDER_FRAME_ACTIVITY = "/companyorder/CreateOrderFrameActivity";
-    //万箱合伙人提交成功
-    public static final String PLATFORM_ACTIVITY_SUCCESS = "/companyorder/PLATFORM_ACTIVITY_SUCCESS";
-
-    //---------------------------------个人中心--------------------------------
-
-    // 登陆
-    public static final String USER_LOGIN = "/user/loginactivity";
-    public static final String USER_PLATFORM = "/user/platformactivity";
-    // 个人中心
-    public static final String USER_INFO = "/user/userinfoactivity";
-    // 业务范围
-    public static final String BUSINESS_SCOPE = "/user/businessscopeactivity";
-    // 平台支持
-    public static final String PLATFORM_SUPPORT = "/user/platformsupportactivity";
-
-
+    public static final String LOVESNOW_MAIN_ACTIVITY = "/lovesnow/lovesnowmainActivity";
 }

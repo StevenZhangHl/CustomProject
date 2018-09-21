@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.horen.base.widget.HRToolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"></com.horen.base.widget.HRToolbar>
+
+        <TextView
+            android:id="@+id/tv_love_wife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_100"
+            android:text="@string/snow_love_snow"
+            android:textColor="@color/color_main_color"
+            android:textSize="@dimen/textSize_30" />
+
+        <ImageView
+            android:id="@+id/lovesnow_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_50"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_heart" />
+
+        <TextView
+            android:id="@+id/tv_wife_hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/snow_wife_hard"
+            android:textColor="@color/color_main_color"
+            android:textSize="@dimen/textSize_30" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
