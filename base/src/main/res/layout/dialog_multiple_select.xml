@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_333"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        tools:listitem="@layout/item_multiple_select" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/white" />
+
+    <com.allen.library.SuperButton
+        android:id="@+id/stb_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:enabled="false"
+        android:text="确定"
+        android:textColor="@color/color_999"
+        android:textSize="16sp"
+        app:sSelectorDisableColor="@color/DCDCDC"
+        app:sSelectorNormalColor="@color/color_main"
+        app:sSelectorPressedColor="@color/color_main"
+        app:sUseSelector="true" />
+</LinearLayout>

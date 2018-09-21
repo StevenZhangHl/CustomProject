@@ -1,0 +1,1 @@
+include ':app',':base',':maplib',':indexlib',':countrylib',':chart'

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tool_bar_white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:minHeight="@dimen/toolbar_height"
+    android:paddingLeft="11.5dp"
+    android:subtitle=""
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/greenToolbarTheme">
+
+    <TextView
+        android:id="@+id/left_tv_white"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_13"
+        android:visibility="gone"
+        tools:text="左标题"
+        tools:visibility="gone" />
+
+    <TextView
+        android:layout_marginRight="11.5dp"
+        android:id="@+id/tool_bar_title_tv_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:text="标题" />
+
+    <ImageView
+        android:id="@+id/left_iv_white"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|start"
+        android:background="?attr/actionBarItemBackground"
+        android:padding="12dp"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/right_iv_white"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|end"
+        android:background="?attr/actionBarItemBackground"
+        android:padding="12dp"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/right_tv_white"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="?attr/actionBarItemBackground"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_15"
+        tools:text="右标题" />
+</android.support.v7.widget.Toolbar>

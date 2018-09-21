@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">base</string>
+
+    <!--error -->
+    <string name="error_please_check_network">请检查网络设置</string>
+    <string name="loading">加载中</string>
+    <string name="sacn">二维码</string>
+    <string name="disagree">取消</string>
+    <string name="connection_network_error">服务器不稳定,请稍候再试</string>
+    <string name="no_network_tip">世界上最遥远的距离莫过于此</string>
+    <string name="cont_connection_server">无法连接服务器</string>
+    <string name="cont_connection_network">网络无法连接</string>
+
+    <string name="load_more">上拉刷新更多数据</string>
+    <string name="load_now">释放立即加载</string>
+    <string name="loading_footer">加载中</string>
+    <string name="refresh_footer">正在刷新...</string>
+    <string name="load_complete">加载完成</string>
+    <string name="loading_fail">加载失败</string>
+    <string name="loading_finish_footer">无更多数据</string>
+    <string name="base_no_data">暂无数据</string>
+    <string name="base_reload">再试一次</string>
+    <string name="hint_exit">再按一次退出程序</string>
+    <string name="show_orders_nearly_one_year">显示近一年订单</string>
+</resources>

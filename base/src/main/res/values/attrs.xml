@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HRToolbar">
+        <attr name="title" format="string" />
+        <attr name="left_title" format="string" />
+        <attr name="right_title" format="string" />
+        <attr name="is_white" format="boolean" />
+        <attr name="title_elevation" format="integer" />
+        <attr name="bg_color" format="reference" />
+        <attr name="right_icon" format="reference" />
+        <attr name="left_icon" format="reference" />
+    </declare-styleable>
+    <!--验证码的属性-->
+    <declare-styleable name="VerCodeEditText">
+        <attr name="figures" format="integer" />
+        <attr name="verCodeMargin" format="dimension" />
+        <attr name="bottomLineSelectedColor" format="reference" />
+        <attr name="bottomLineNormalColor" format="reference" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="selectedBackgroundColor" format="reference" />
+    </declare-styleable>
+    <!--多种颜色变换按钮-->
+    <declare-styleable name="RippleButton">
+        <attr name="gray_text" format="string" />
+        <attr name="red_text" format="string" />
+        <attr name="green_text" format="string" />
+        <attr name="rbt_radius" format="dimension" />
+        <attr name="loading_text" format="string" />
+    </declare-styleable>
+    <!--通用表格类型控件，用于内含多个TextView-->
+    <declare-styleable name="HRTabView">
+        <attr name="tab_strings" format="string" />
+        <attr name="tab_weight" format="string" />
+        <attr name="tab_text_color" format="reference" />
+        <attr name="tab_text_size" format="dimension" />
+    </declare-styleable>
+
+    <!--拼接文字TextView-->
+    <declare-styleable name="HRTextView">
+        <attr name="left_text" format="string" />
+        <attr name="is_add_colon" format="boolean" />
+    </declare-styleable>
+</resources>
