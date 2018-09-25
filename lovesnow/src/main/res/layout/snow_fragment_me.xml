@@ -13,17 +13,29 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height"></com.horen.base.widget.HRToolbar>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_love_snow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/snow_animtaed_love"
+            android:visibility="visible" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="老婆大人的专属"
-                android:textColor="@color/color_main_color"
-                android:textSize="@dimen/textSize_30" />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/image_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/snow_animated_line_heart"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bt_start_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/color_main_color"
+            android:text="开始"
+            android:textColor="@color/white" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

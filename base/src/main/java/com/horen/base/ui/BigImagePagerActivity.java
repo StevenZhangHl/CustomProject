@@ -1,9 +1,12 @@
 package com.horen.base.ui;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
@@ -17,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
@@ -61,11 +65,14 @@ public class BigImagePagerActivity extends BaseActivity {
         activity.startActivity(intent);
     }
 
-    public static void startImageForResouceId(Activity activity, List<Integer> imageResouceIds, int position) {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void startImageForResouceId(Activity activity, List<Integer> imageResouceIds, int position, ImageView imageView) {
         Intent intent = new Intent(activity, BigImagePagerActivity.class);
+        Bundle options = ActivityOptions.makeSceneTransitionAnimation(
+                activity, imageView, "shareImage").toBundle();
         intent.putIntegerArrayListExtra(INTENT_LIST, new ArrayList<Integer>(imageResouceIds));
         intent.putExtra(INTENT_POSITION, position);
-        activity.startActivity(intent);
+        activity.startActivity(intent, options);
     }
 
     /**

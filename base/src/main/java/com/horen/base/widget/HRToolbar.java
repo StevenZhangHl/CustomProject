@@ -42,7 +42,7 @@ public class HRToolbar extends FrameLayout {
     /**
      * 默认2dp阴影
      */
-    private int elevation = 2;
+    private int elevation = 0;
     /**
      * Toolbar背景颜色
      */
@@ -78,7 +78,7 @@ public class HRToolbar extends FrameLayout {
             title = a.getString(R.styleable.HRToolbar_title);
             leftTitle = a.getString(R.styleable.HRToolbar_left_title);
             rightTitle = a.getString(R.styleable.HRToolbar_right_title);
-            elevation = a.getInteger(R.styleable.HRToolbar_title_elevation, 2);
+            elevation = a.getInteger(R.styleable.HRToolbar_title_elevation, 0);
             isWhite = a.getBoolean(R.styleable.HRToolbar_is_white, false);
             backgroundColor = a.getColor(R.styleable.HRToolbar_bg_color, ContextCompat.getColor(mContent, R.color.color_main_color));
             rightIcon = a.getDrawable(R.styleable.HRToolbar_right_icon);

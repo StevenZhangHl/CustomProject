@@ -2,4 +2,14 @@
     <string name="snow_app_name">snowhome</string>
     <string name="snow_love_snow">我爱你老婆</string>
     <string name="snow_wife_hard">老婆你辛苦啦</string>
+    <string name="snow_large_image">shareImage</string>
+    <string name="snow_path_love">M 12,12 L 12,80 A 12,12,90,0,0,24,80 L 28,12 A 38,38,0,1,1,28,12</string>
+    <string name="snow_path_heart_line">M 15,50
+        L 50,85 L 85,50 L 67.5,32.5
+        A 17.5,17.5 0,1,1,32.5,67.5
+        A 17.5,17.5 0,0,1,67.5,32.5
+        L 50,15 L 15,50
+        A 17.5,17.5 0,0,1,50,15
+        A 17.5,17.5 0,0,1,85,50</string>
+    <string name="snow_path_bonc">M 12,25 L 42,25 A 12.5,12.5,90,1,1,42,50 L 56,50 A 24,24,0,1,1,104,50 L 108,50 L 108,25 L 118,25 133,50 L 133,25 L 143,25 L 143,50 L 148,50 A 25,25 -90,0,1,178,25 L 178,35 A 15,15,-90,0,0,158,50 A 15,15,90,0,0,178,65 L 178,75 A 25,25,90,0,1,148,50 L 143,50 L 143,75 L 133,75,118,50 L 118,75 L 108 75 L 108,50 L 104,50 A 24,24,180,1,1,56,50 L 42,50 A 12.5,12.5,90,1,1,42,75 L 12,75 L 12 ,25</string>
 </resources>

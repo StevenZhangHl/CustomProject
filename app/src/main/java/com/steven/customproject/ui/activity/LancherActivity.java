@@ -21,7 +21,7 @@ import io.reactivex.functions.Consumer;
 
 
 public class LancherActivity extends BaseActivity {
-    private int duration = 2000;
+    private int duration = 1000;
     private ImageView iv_spash;
 
     @Override

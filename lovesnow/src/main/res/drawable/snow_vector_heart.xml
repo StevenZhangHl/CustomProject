@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+    <path
+        android:name="line1"
+        android:pathData="@string/snow_path_heart_line"
+        android:strokeColor="@color/color_main_color"
+        android:strokeLineCap="round"
+        android:strokeWidth="1"/>
+</vector>

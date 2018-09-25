@@ -3,7 +3,8 @@
     package="com.steven.lovesnow">
 
     <application>
-        <activity android:name="com.steven.snowhome.ui.activity.SnowMainActivity"></activity>
+        <activity android:name="com.steven.snowhome.ui.activity.SnowMainActivity" />
+        <activity android:name="com.steven.snowhome.ui.activity.BigImageActivity"></activity>
     </application>
 
 </manifest>

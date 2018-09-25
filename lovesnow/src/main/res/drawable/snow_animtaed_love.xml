@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:drawable="@drawable/snow_vector_love"
+    tools:targetApi="lollipop">
+    <target
+        android:name="love"
+        android:animation="@anim/snow_animator_line_heart"></target>
+</animated-vector>

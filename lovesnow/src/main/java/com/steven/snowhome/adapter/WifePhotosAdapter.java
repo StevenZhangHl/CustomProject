@@ -18,18 +18,33 @@ import java.util.List;
  * Description:This isWifePhotosAdapter
  */
 public class WifePhotosAdapter extends BaseQuickAdapter<Integer, BaseViewHolder> {
+    private List<Integer> itemHeights = new ArrayList<>();
+
     public WifePhotosAdapter(int layoutResId, @Nullable List<Integer> data) {
         super(layoutResId, data);
+    }
+
+    /**
+     * 根据数据源大小设置条目高度数组
+     *
+     * @param size
+     */
+    public void setItemHeights(int size) {
+        for (int i = 0; i < size; i++) {
+            int height = (int) (Math.random() * 400 + 200);
+            itemHeights.add(height);
+        }
     }
 
     @Override
     protected void convert(BaseViewHolder helper, Integer item) {
         ImageView imageView = helper.getView(R.id.iv_wife_photo);
         //改变holder.button的高度
-        int height = (int) (Math.random() * 400 + 200);
+        int height = itemHeights.get(helper.getLayoutPosition());
         ViewGroup.LayoutParams lp = imageView.getLayoutParams();
         lp.height = height;
         imageView.setLayoutParams(lp);
         ImageLoader.loadDrawable(mContext, item, imageView);
+        helper.addOnClickListener(R.id.iv_wife_photo);
     }
 }
