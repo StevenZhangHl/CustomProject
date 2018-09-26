@@ -21,6 +21,8 @@ public interface SnowHomeContract {
         void setBannerData(List<SnowHomeBean.Banner> bannerData);
 
         void setHomeArticlesData(List<SnowHomeBean.Article> articlesData);
+
+        void setTagData(List<SnowHomeBean.TagItem> tagData);
     }
 
     abstract class Presenter extends BasePresenter<View, Model> {

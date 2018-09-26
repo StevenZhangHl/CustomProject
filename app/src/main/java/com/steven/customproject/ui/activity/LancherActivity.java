@@ -44,6 +44,7 @@ public class LancherActivity extends BaseActivity {
         animation.setDuration(duration);
         animation.setFillAfter(true);
         animation.setInterpolator(new LinearInterpolator());
+        animation.setFillEnabled(true);
         animation.setRepeatCount(1);
         iv_spash.startAnimation(animation);
         mRxManager.add(Observable.timer(duration, TimeUnit.MILLISECONDS).compose(RxHelper.<Long>applySchedulers())

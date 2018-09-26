@@ -1,6 +1,7 @@
 package com.steven.snowhome.ui.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import com.steven.snowhome.bean.SnowHomeBean;
 import com.steven.snowhome.mvp.contract.SnowHomeContract;
 import com.steven.snowhome.mvp.presenter.SnowHomePresenter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,9 +42,11 @@ public class SnowHomeFragment extends BaseFragment<SnowHomePresenter, SnowHomeCo
     private HRToolbar tool_bar;
     private ConvenientBanner banner_home;
     private RecyclerView recyclerview_home_photos;
+    private RecyclerView recyclerview_home_tag;
     private SmartRefreshLayout refresh_home;
     private LinearLayout layoutIndex;
     private HomeAdapter homeAdapter;
+    private HomeTagAdapter homeTagAdapter;
     private int autoTurningTime = 4000;
 
     @Override
@@ -65,6 +69,7 @@ public class SnowHomeFragment extends BaseFragment<SnowHomePresenter, SnowHomeCo
         recyclerview_home_photos = (RecyclerView) rootView.findViewById(R.id.recyclerview_home_photos);
         refresh_home = (SmartRefreshLayout) rootView.findViewById(R.id.refresh_home);
         layoutIndex = (LinearLayout) rootView.findViewById(R.id.ll_home_banner_index);
+        recyclerview_home_tag = (RecyclerView) rootView.findViewById(R.id.recyclerview_home_tag);
         initRecyclerView();
         initRefreshLayout();
     }
@@ -79,6 +84,13 @@ public class SnowHomeFragment extends BaseFragment<SnowHomePresenter, SnowHomeCo
         recyclerview_home_photos.setAdapter(homeAdapter);
         recyclerview_home_photos.setHasFixedSize(true);
         recyclerview_home_photos.setNestedScrollingEnabled(false);
+        homeTagAdapter = new HomeTagAdapter(R.layout.snow_item_home_tag, new ArrayList<SnowHomeBean.TagItem>());
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(_mActivity, 5);
+        gridLayoutManager.setSmoothScrollbarEnabled(true);
+        recyclerview_home_tag.setLayoutManager(gridLayoutManager);
+        recyclerview_home_tag.setAdapter(homeTagAdapter);
+        recyclerview_home_tag.setHasFixedSize(true);
+        recyclerview_home_tag.setNestedScrollingEnabled(false);
     }
 
     private void initRefreshLayout() {
@@ -104,6 +116,11 @@ public class SnowHomeFragment extends BaseFragment<SnowHomePresenter, SnowHomeCo
     @Override
     public void setHomeArticlesData(List<SnowHomeBean.Article> articlesData) {
         homeAdapter.setmData(articlesData);
+    }
+
+    @Override
+    public void setTagData(List<SnowHomeBean.TagItem> tagData) {
+        homeTagAdapter.setNewData(tagData);
     }
 
     @Override

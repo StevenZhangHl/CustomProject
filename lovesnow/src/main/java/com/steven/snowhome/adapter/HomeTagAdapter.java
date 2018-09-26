@@ -1,6 +1,7 @@
 package com.steven.snowhome.adapter;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,44 +9,35 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.horen.base.util.ImageLoader;
 import com.kevin.delegationadapter.AdapterDelegate;
 import com.steven.lovesnow.R;
 import com.steven.snowhome.bean.SnowHomeBean;
+
+import java.util.List;
 
 /**
  * Author:Steven
  * Time:2018/9/26 14:29
  * Description:This isHomeTagAdapter
  */
-public class HomeTagAdapter extends AdapterDelegate<SnowHomeBean.TagItem, HomeTagAdapter.ViewHolder> {
-    private Context context;
+public class HomeTagAdapter extends BaseQuickAdapter<SnowHomeBean.TagItem, BaseViewHolder> {
 
-    public HomeTagAdapter(Context context) {
-        this.context = context;
+    public HomeTagAdapter(int layoutResId, @Nullable List<SnowHomeBean.TagItem> data) {
+        super(layoutResId, data);
     }
 
     @Override
-    protected ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.snow_item_home_tag, parent, false);
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
     }
 
     @Override
-    protected void onBindViewHolder(ViewHolder holder, int position, SnowHomeBean.TagItem item) {
-        ImageLoader.load(context, item.getImg(), holder.iv_tag);
-        holder.tv_tag.setText(item.getTitle());
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView iv_tag;
-        private TextView tv_tag;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            iv_tag = (ImageView) itemView.findViewById(R.id.iv_tag);
-            tv_tag = (TextView) itemView.findViewById(R.id.tv_tag);
-        }
+    protected void convert(BaseViewHolder helper, SnowHomeBean.TagItem item) {
+        helper.getItemViewType();
+        ImageLoader.load(mContext, item.getImg(), (ImageView) helper.getView(R.id.iv_tag));
+        helper.setText(R.id.tv_tag, item.getTitle());
     }
 }

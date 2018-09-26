@@ -52,7 +52,10 @@
                             android:gravity="center"
                             android:orientation="horizontal" />
                     </RelativeLayout>
-
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview_home_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recyclerview_home_photos"
                         android:layout_width="match_parent"

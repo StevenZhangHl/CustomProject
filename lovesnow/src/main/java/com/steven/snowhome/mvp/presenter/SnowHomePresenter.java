@@ -17,5 +17,6 @@ public class SnowHomePresenter extends SnowHomeContract.Presenter {
         SnowHomeBean snowHomeBean = new Gson().fromJson(jsonData, SnowHomeBean.class);
         mView.setBannerData(snowHomeBean.getBanner());
         mView.setHomeArticlesData(snowHomeBean.getArticles());
+        mView.setTagData(snowHomeBean.getTags());
     }
 }
