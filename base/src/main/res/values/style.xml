@@ -113,4 +113,78 @@
         <item name="listPopupWindowStyle">@style/Popup.Zhihu</item>
         <item name="capture.textColor">@color/zhihu_capture</item>
     </style>
+
+    <style name="textview_title">
+        <item name="android:textSize">@dimen/textSize_15</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:layout_marginLeft">@dimen/margin_15</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="edit_textview">
+        <item name="android:textSize">@dimen/textSize_13</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:layout_marginLeft">26dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColorHint">@color/DCDCDC</item>
+        <item name="android:layout_marginRight">@dimen/margin_15</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="textview_white_sencond_title">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_f5</item>
+        <item name="android:textSize">@dimen/textSize_13</item>
+    </style>
+
+    <style name="textview_66color_14size">
+        <item name="android:textSize">@dimen/textSize_14</item>
+        <item name="android:textColor">@color/color_666</item>
+    </style>
+
+    <style name="textview_66color_15size">
+        <item name="android:textSize">@dimen/textSize_15</item>
+        <item name="android:textColor">@color/color_666</item>
+    </style>
+
+    <style name="textview_66color_12size">
+        <item name="android:textSize">@dimen/textSize_12</item>
+        <item name="android:textColor">@color/color_666</item>
+    </style>
+
+    <style name="textview_66color_13size">
+        <item name="android:textSize">@dimen/textSize_13</item>
+        <item name="android:textColor">@color/color_666</item>
+    </style>
+
+    <style name="textview_33color_14size">
+        <item name="android:textSize">@dimen/textSize_14</item>
+        <item name="android:textColor">@color/color_333</item>
+    </style>
+
+    <style name="textview_33color_15size">
+        <item name="android:textSize">@dimen/textSize_15</item>
+        <item name="android:textColor">@color/color_333</item>
+    </style>
+
+    <style name="textview_33color_13size">
+        <item name="android:textSize">@dimen/textSize_13</item>
+        <item name="android:textColor">@color/color_333</item>
+    </style>
+
+    <style name="textview_33color_18size">
+        <item name="android:textSize">@dimen/textSize_18</item>
+        <item name="android:textColor">@color/color_333</item>
+    </style>
+
+    <style name="textview_f5color_12size">
+        <item name="android:textSize">@dimen/textSize_12</item>
+        <item name="android:textColor">@color/color_f5</item>
+    </style>
 </resources>

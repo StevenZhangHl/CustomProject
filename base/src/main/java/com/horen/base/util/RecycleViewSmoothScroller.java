@@ -28,6 +28,6 @@ public class RecycleViewSmoothScroller extends LinearSmoothScroller {
      */
     @Override
     protected float calculateSpeedPerPixel(DisplayMetrics displayMetrics) {
-        return 100f / displayMetrics.densityDpi;
+        return 50f / displayMetrics.densityDpi;
     }
 }

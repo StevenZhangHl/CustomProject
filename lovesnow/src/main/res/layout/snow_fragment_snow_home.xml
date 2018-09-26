@@ -1,45 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        app:srlEnableFooterTranslationContent="false"
+        app:srlEnableLoadMoreWhenContentNotFull="false">
 
-        <com.horen.base.widget.HRToolbar
-            android:id="@+id/tool_bar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/toolbar_height"></com.horen.base.widget.HRToolbar>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_love_wife"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margin_100"
-            android:text="@string/snow_love_snow"
-            android:textColor="@color/color_main_color"
-            android:textSize="@dimen/textSize_30" />
+            <com.horen.base.widget.HRToolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"></com.horen.base.widget.HRToolbar>
 
-        <ImageView
-            android:id="@+id/lovesnow_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/margin_50"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/bg_heart" />
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_wife_hard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margin_10"
-            android:text="@string/snow_wife_hard"
-            android:textColor="@color/color_main_color"
-            android:textSize="@dimen/textSize_30" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="172dp">
+
+                        <com.bigkoo.convenientbanner.ConvenientBanner
+                            android:id="@+id/banner_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:canLoop="true"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+                        <LinearLayout
+                            android:id="@+id/ll_home_banner_index"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview_home_photos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </android.support.constraint.ConstraintLayout>

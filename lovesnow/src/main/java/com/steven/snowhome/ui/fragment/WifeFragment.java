@@ -11,6 +11,7 @@ import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.horen.base.base.BaseFragment;
 import com.horen.base.ui.BigImagePagerActivity;
+import com.horen.base.util.RecycleViewSmoothScroller;
 import com.horen.base.widget.AutoLoadRecyclerView;
 import com.horen.base.widget.HRToolbar;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -34,6 +35,7 @@ public class WifeFragment extends BaseFragment implements OnRefreshLoadMoreListe
     private WifePhotosAdapter photosAdapter;
     private SmartRefreshLayout refresh_photos;
     private List<Integer> serverImages = new ArrayList<>();
+    private StaggeredGridLayoutManager staggeredGridLayoutManager;
 
     public static WifeFragment newInstance(String title) {
         Bundle bundle = new Bundle();
@@ -61,8 +63,25 @@ public class WifeFragment extends BaseFragment implements OnRefreshLoadMoreListe
         initToolbar(tool_bar.getToolbar());
         tool_bar.setTitle("疼老婆");
         tool_bar.getToolbar().setNavigationIcon(null);
+        tool_bar.setOnTitleListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (serverImages.size()!=0){
+                    scrollToTop();
+                }
+            }
+        });
         initRecyclerView();
         initRefreshView();
+    }
+
+    /**
+     * 视图滚动到顶部
+     */
+    private void scrollToTop() {
+        RecyclerView.SmoothScroller smoothScroller = new RecycleViewSmoothScroller(_mActivity);
+        smoothScroller.setTargetPosition(0);
+        staggeredGridLayoutManager.startSmoothScroll(smoothScroller);
     }
 
     private void initRefreshView() {
@@ -71,9 +90,11 @@ public class WifeFragment extends BaseFragment implements OnRefreshLoadMoreListe
         refresh_photos.autoRefresh();
     }
 
+
     private void initRecyclerView() {
+        staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerview_photos.setHasFixedSize(true);
-        recyclerview_photos.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerview_photos.setLayoutManager(staggeredGridLayoutManager);
         photosAdapter = new WifePhotosAdapter(R.layout.snow_item_wife_photos, new ArrayList<Integer>());
         recyclerview_photos.setAdapter(photosAdapter);
         recyclerview_photos.setOnScrollListener(_mActivity);

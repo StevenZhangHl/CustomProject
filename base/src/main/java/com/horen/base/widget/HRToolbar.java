@@ -151,7 +151,7 @@ public class HRToolbar extends FrameLayout {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             setElevation(0);
         }
-        if(elevation != 0) {
+        if (elevation != 0) {
             // 不使用阴影，统一使用线，白色背景使用 #F5F5F5颜色分割线,其他颜色使用#F1F1F1分割线
             if (backgroundColor == ContextCompat.getColor(mContent, R.color.white)) {
                 View diver = new View(mContent);
@@ -227,6 +227,14 @@ public class HRToolbar extends FrameLayout {
      */
     public void setOnRightImgListener(OnClickListener listener) {
         ivRight.setOnClickListener(listener);
+    }
+
+    /**
+     * 中间标题的点击事件
+     * @param listener
+     */
+    public void setOnTitleListener(OnClickListener listener) {
+        tvTitle.setOnClickListener(listener);
     }
 
     /**
